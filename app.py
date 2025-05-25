@@ -16,8 +16,11 @@ except Exception as e:
 
 
 # Load the MinMaxScaler
-with open('scaler.pkl', 'rb') as file:
-    scaler = pickle.load(file)
+try:
+    with open('scaler.pkl', 'rb') as file:
+        scaler = pickle.load(file)
+except Exception as e:
+    st.error(f"Not load the scaler model: {e}")
 
 # Define the input features for the model
 feature_names = [
