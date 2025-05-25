@@ -8,8 +8,12 @@ import plotly.express as px
 st.set_page_config(page_title="Customer Churn Predictor", layout="wide")
 
 # Load the trained model
-with open('best_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+try:
+    with open('best_model.pkl', 'rb') as file:
+        model = pickle.load(file)
+except Exception as e:
+    st.error(f"Could not load model: {e}")
+
 
 # Load the MinMaxScaler
 with open('scaler.pkl', 'rb') as file:
