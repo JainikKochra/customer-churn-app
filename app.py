@@ -40,7 +40,8 @@ default_values = [
 ]
 
 # Sidebar setup
-st.sidebar.image("Pic 1.PNG", use_container_width=True)  # Display Pic 1
+st.sidebar.image("RBI.jpg", use_container_width=True)  # Display Pic 1
+# st.sidebar.image("Pic 1.PNG", use_container_width=True)  # Display Pic 1
 
 st.sidebar.header("User Inputs")
 
